@@ -17197,6 +17197,350 @@
                 }
               ],
               "categories": {}
+            },
+            "outbound-nat-rule": {
+              "name": "outbound-nat-rule",
+              "description": "Commands to manage load balancer outbound NAT rules",
+              "fullName": "network lb outbound-nat-rule",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "create",
+                  "description": "Add a load balancing outbound NAT rule to the load balancer",
+                  "fullName": "network lb outbound-nat-rule create",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the outbound NAT rule"
+                    },
+                    {
+                      "flags": "-b, --backend-address-pool <backend-address-pool>",
+                      "required": -28,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-b",
+                      "long": "--backend-address-pool",
+                      "description": "name of the backend address pool"
+                    },
+                    {
+                      "flags": "-f, --frontend-ip <frontend-ip>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-f",
+                      "long": "--frontend-ip",
+                      "description": "the name of the frontend ip configuration"
+                    },
+                    {
+                      "flags": "-p, --allocated-outbound-ports <frontend-ip>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-p",
+                      "long": "--allocated-outbound-ports",
+                      "description": "the allocated outbound ports"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "set",
+                  "description": "Set a load balancing outbound NAT rule of load balancer",
+                  "fullName": "network lb outbound-nat-rule set",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the outbound NAT rule"
+                    },
+                    {
+                      "flags": "-b, --backend-address-pool <backend-address-pool>",
+                      "required": -28,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-b",
+                      "long": "--backend-address-pool",
+                      "description": "name of the backend address pool"
+                    },
+                    {
+                      "flags": "-f, --frontend-ip <frontend-ip>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-f",
+                      "long": "--frontend-ip",
+                      "description": "the name of the frontend ip configuration"
+                    },
+                    {
+                      "flags": "-p, --allocated-outbound-ports <frontend-ip>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-p",
+                      "long": "--allocated-outbound-ports",
+                      "description": "the allocated outbound ports"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "list",
+                  "description": "Get all load balancing outbound NAT rules of load balancer",
+                  "fullName": "network lb outbound-nat-rule list",
+                  "usage": "[options] <resource-group> <lb-name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "delete",
+                  "description": "Delete a load balancing outbound NAT rule from a load balancer",
+                  "fullName": "network lb outbound-nat-rule delete",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the outbound NAT rule"
+                    },
+                    {
+                      "flags": "-q, --quiet",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-q",
+                      "long": "--quiet",
+                      "description": "quiet mode, do not ask for delete confirmation"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
             }
           }
         },
