@@ -23161,7 +23161,7 @@
                       "bool": true,
                       "short": "-u",
                       "long": "--status",
-                      "description": "the express route circuit authorization status, \n    valid values are [Available,InUse}. default value is \"Available\""
+                      "description": "the express route circuit authorization status, \n    valid values are [Available,Used}. default value is \"Available\""
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
