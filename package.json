@@ -12,7 +12,7 @@
     "Zavery, Amar <amzavery@microsoft.com>",
     "Wang, Yugang <yugangw@microsoft.com>"
   ],
-  "version": "0.9.9",
+  "version": "0.9.10",
   "description": "Microsoft Azure Cross Platform Command Line tool",
   "tags": [
     "azure",
@@ -54,7 +54,7 @@
     "azure-asm-mgmt": "0.10.1",
     "azure-monitoring": "0.10.2",
     "azure-asm-network": "0.10.2",
-    "azure-arm-resource": "0.10.3",
+    "azure-arm-resource": "0.10.6",
     "azure-asm-sb": "0.10.1",
     "azure-asm-sql": "0.10.1",
     "azure-asm-storage": "0.10.1",
@@ -72,7 +72,7 @@
     "js2xmlparser": "1.0.0",
     "jsrsasign": "4.8.2 ",
     "jszip": "^2.5.0",
-    "kuduscript": "1.0.2",
+    "kuduscript": "1.0.3",
     "mime": "~1.2.4",
     "moment": "2.6.0",
     "node-forge": "0.6.23",
