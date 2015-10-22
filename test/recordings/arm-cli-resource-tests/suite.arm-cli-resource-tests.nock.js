@@ -6,8 +6,8 @@ exports.getMockedProfile = function () {
   var newProfile = new profile.Profile();
 
   newProfile.addSubscription(new profile.Subscription({
-    id: '38b598fc-e57a-423f-b2e7-dc0ddb631f1f',
-    name: 'Visual Studio Ultimate with MSDN',
+    id: '7e2dffb5-45b5-475a-91be-d3d9973c82d4',
+    name: 'AUX Dashboard Subscription',
     user: {
       name: 'user@domain.example',
       type: 'user'
