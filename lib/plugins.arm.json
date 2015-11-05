@@ -23538,7 +23538,7 @@
                       "bool": true,
                       "short": "-y",
                       "long": "--type",
-                      "description": "the express route circuit peering type,\n     supported types [AzurePublicPeering,AzurePrivatePeering,MicrosoftPeering}"
+                      "description": "the express route circuit peering type,\n     supported types [AzurePrivatePeering,AzurePublicPeering,MicrosoftPeering}"
                     },
                     {
                       "flags": "-e, --state <state>",
@@ -23622,8 +23622,8 @@
                       "description": "the identifier that is used to identify the customer"
                     },
                     {
-                      "flags": "-f, --ms-advertised-public-prefixes",
-                      "required": 0,
+                      "flags": "-f, --ms-advertised-public-prefixes <ms-advertised-public-prefixes>",
+                      "required": -37,
                       "optional": 0,
                       "bool": true,
                       "short": "-f",
@@ -23631,8 +23631,8 @@
                       "description": "comma separated list of prefixes that will be advertised through the BGP peering"
                     },
                     {
-                      "flags": "-m, --ms-advertised-public-prefix-state",
-                      "required": 0,
+                      "flags": "-m, --ms-advertised-public-prefix-state <ms-advertised-public-prefix-state>",
+                      "required": -41,
                       "optional": 0,
                       "bool": true,
                       "short": "-m",
@@ -23640,8 +23640,8 @@
                       "description": "specifies the configuration state of the BGP session,\n      one of [NotConfigured,Configuring,Configured,ValidationNeeded]"
                     },
                     {
-                      "flags": "-k, --ms-customer-asn",
-                      "required": 0,
+                      "flags": "-k, --ms-customer-asn <ms-customer-asn>",
+                      "required": -23,
                       "optional": 0,
                       "bool": true,
                       "short": "-k",
@@ -23649,8 +23649,8 @@
                       "description": "ASN of the customer"
                     },
                     {
-                      "flags": "-u, --ms-routing-registry-name",
-                      "required": 0,
+                      "flags": "-u, --ms-routing-registry-name <ms-routing-registry-name>",
+                      "required": -32,
                       "optional": 0,
                       "bool": true,
                       "short": "-u",
@@ -23734,7 +23734,7 @@
                       "bool": true,
                       "short": "-y",
                       "long": "--type",
-                      "description": "the express route circuit peering type,\n     supported types [AzurePublicPeering,AzurePrivatePeering,MicrosoftPeering}"
+                      "description": "the express route circuit peering type,\n     supported types [AzurePrivatePeering,AzurePublicPeering,MicrosoftPeering}"
                     },
                     {
                       "flags": "-e, --state <state>",
