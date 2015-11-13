@@ -23100,11 +23100,11 @@
                   "description": "the name of subnet in the virtual network identified by --vnet-name"
                 },
                 {
-                  "flags": "-C, --cert-file <cert-file>",
+                  "flags": "-с, --cert-file <cert-file>",
                   "required": -17,
                   "optional": 0,
                   "bool": true,
-                  "short": "-C",
+                  "short": "-с",
                   "long": "--cert-file",
                   "description": "the path to the certificate"
                 },
@@ -23127,11 +23127,11 @@
                   "description": "comma separated list of IP addresses or DNS names corresponding to backend servers"
                 },
                 {
-                  "flags": "-c, --http-settings-protocol <http-settings-protocol>",
+                  "flags": "-i, --http-settings-protocol <http-settings-protocol>",
                   "required": -30,
                   "optional": 0,
                   "bool": true,
-                  "short": "-c",
+                  "short": "-i",
                   "long": "--http-settings-protocol",
                   "description": "the HTTP settings protocol, valid value is \"Http\""
                 },
@@ -24529,6 +24529,15 @@
                       "description": "use json output"
                     },
                     {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
                       "flags": "-w, --gateway-name <gateway-name>",
                       "required": -20,
                       "optional": 0,
@@ -24624,6 +24633,15 @@
                       "bool": true,
                       "long": "--json",
                       "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
                     },
                     {
                       "flags": "-w, --gateway-name <gateway-name>",
@@ -24757,7 +24775,7 @@
                       "bool": true,
                       "short": "-c",
                       "long": "--cookie-based-affinity",
-                      "description": "Enable or disable cookie based affinity, valid values are\n     [Disabled,Enabled],\n     default value is [Disabled]"
+                      "description": "enable or disable cookie based affinity, valid values are\n     [Disabled,Enabled],\n     default value is [Disabled]"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
