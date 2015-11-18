@@ -27023,11 +27023,11 @@
                       "description": "the secondary address prefix, must be valid CIDR format"
                     },
                     {
-                      "flags": "-i, --primary-azure-port <primary-azure-port>",
+                      "flags": "-d, --primary-azure-port <primary-azure-port>",
                       "required": -26,
                       "optional": 0,
                       "bool": true,
-                      "short": "-i",
+                      "short": "-d",
                       "long": "--primary-azure-port",
                       "description": "the primary azure port"
                     },
