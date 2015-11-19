@@ -27041,11 +27041,11 @@
                       "description": "the secondary azure port"
                     },
                     {
-                      "flags": "-d, --shared-key <shared-key>",
+                      "flags": "-k, --shared-key <shared-key>",
                       "required": -18,
                       "optional": 0,
                       "bool": true,
-                      "short": "-d",
+                      "short": "-k",
                       "long": "--shared-key",
                       "description": "the shared key"
                     },
@@ -27077,11 +27077,11 @@
                       "description": "specifies the configuration state of the BGP session,\n      one of [NotConfigured,Configuring,Configured,ValidationNeeded]"
                     },
                     {
-                      "flags": "-k, --ms-customer-asn <ms-customer-asn>",
+                      "flags": "-l, --ms-customer-asn <ms-customer-asn>",
                       "required": -23,
                       "optional": 0,
                       "bool": true,
-                      "short": "-k",
+                      "short": "-l",
                       "long": "--ms-customer-asn",
                       "description": "ASN of the customer"
                     },
@@ -27219,11 +27219,11 @@
                       "description": "the secondary address prefix, must be valid CIDR format"
                     },
                     {
-                      "flags": "-i, --primary-azure-port <primary-azure-port>",
+                      "flags": "-d, --primary-azure-port <primary-azure-port>",
                       "required": -26,
                       "optional": 0,
                       "bool": true,
-                      "short": "-i",
+                      "short": "-d",
                       "long": "--primary-azure-port",
                       "description": "the primary azure port"
                     },
@@ -27237,11 +27237,11 @@
                       "description": "the secondary azure port"
                     },
                     {
-                      "flags": "-d, --shared-key <shared-key>",
+                      "flags": "-k, --shared-key <shared-key>",
                       "required": -18,
                       "optional": 0,
                       "bool": true,
-                      "short": "-d",
+                      "short": "-k",
                       "long": "--shared-key",
                       "description": "the shared key"
                     },
@@ -27273,11 +27273,11 @@
                       "description": "specifies the configuration state of the BGP session,\n      one of [NotConfigured,Configuring,Configured,ValidationNeeded]"
                     },
                     {
-                      "flags": "-k, --ms-customer-asn",
+                      "flags": "-l, --ms-customer-asn",
                       "required": 0,
                       "optional": 0,
                       "bool": true,
-                      "short": "-k",
+                      "short": "-l",
                       "long": "--ms-customer-asn",
                       "description": "ASN of the customer"
                     },
