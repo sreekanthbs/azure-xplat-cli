@@ -27270,7 +27270,7 @@
                       "bool": true,
                       "short": "-m",
                       "long": "--ms-advertised-public-prefix-state",
-                      "description": "specifies the configuration state of the BGP session,\n      one of [%s]"
+                      "description": "specifies the configuration state of the BGP session,\n      one of [NotConfigured,Configuring,Configured,ValidationNeeded]"
                     },
                     {
                       "flags": "-l, --ms-customer-asn <ms-customer-asn>",
