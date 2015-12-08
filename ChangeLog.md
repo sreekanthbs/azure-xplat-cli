@@ -1,3 +1,49 @@
+//To Release - Version 0.9.13
+* VM
+  * Chef Extension
+    * Implemented new option --client-pem for set-chef extension commands
+
+## 2015.11.18 Version 0.9.12
+* Authorization
+  * Fixed json output format for role definition commands
+  * Fixed roleId in authorization change log command to be a guid
+* DataLake
+  *Fix casing for "requires()" for DataLake* modules, enabling functionality on unix machines.
+  *Fix a bug in catalog item enumeration
+  *Fix a bug in downloading files to support binary files
+  *Fix usage bugs for DataLake* commands.
+  *Fix output logic for readability of internal arrays
+  *Fix a bug in ADLA account creation where ADLS accounts were not properly associated.
+  *Updated switch parameters to properly be treated as switch parameters that do not take a value
+
+## 2015.10.29 Version 0.9.11
+* Authorization
+  * Add paging support for role assignment list calls
+  * Modify RoleDefinitionId Display and Input to be a Guid in role and roleassignment commands.
+  * Added RoleId as a parameter in create and delete role assignment commands.
+  * Documentation/help text updates and miscellaneous bug fixes 
+* Resource
+  * Add resource move command
+  * Add list deployment operation command
+  * Add an option to avoid deployment validation
+* Network
+  * Add DNS Zone import commands
+  * Add Express Route providers list commands
+  * Fixed issue #2177, #2236
+* Storage
+  * Uses GA version of storage sdk library
+  * Set the default concurrency to 10
+  * Add --description in the storage account set command
+* Compute
+  * Enable disk encryption options for VM creation
+  * Enable BGInfo extension on VM by default
+* DataLake commands
+* Website
+  * Updated kudu scripts to v1.0.3
+* Login
+  * Add US Goverment environment
+  * Fixed Osx login error caused by invalid keychain entries
+  
 ## 2015.10.02 Version 0.9.10
 * Authorization
   * Fixed display of role assignments display to add and remove certain fields.
