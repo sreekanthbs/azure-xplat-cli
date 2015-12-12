@@ -21725,7 +21725,7 @@
           "commands": [
             {
               "name": "create",
-              "description": "Create a public ip",
+              "description": "Create a public ip address",
               "fullName": "network public-ip create",
               "usage": "[options] <resource-group> <name> <location>",
               "filePath": "commands/arm/network/network._js",
@@ -21798,15 +21798,15 @@
                   "bool": true,
                   "short": "-a",
                   "long": "--allocation-method",
-                  "description": "the allocation method [Static][Dynamic]"
+                  "description": "the allocation method, valid values are\n     [Dynamic,Static], default is Dynamic"
                 },
                 {
-                  "flags": "-i, --idletimeout <idletimeout>",
-                  "required": -19,
+                  "flags": "-i, --idle-timeout <idle-timeout>",
+                  "required": -20,
                   "optional": 0,
                   "bool": true,
                   "short": "-i",
-                  "long": "--idletimeout",
+                  "long": "--idle-timeout",
                   "description": "the idle timeout specified in minutes"
                 },
                 {
@@ -21840,7 +21840,7 @@
             },
             {
               "name": "set",
-              "description": "Set a public ip",
+              "description": "Set a public ip address",
               "fullName": "network public-ip set",
               "usage": "[options] <resource-group> <name>",
               "filePath": "commands/arm/network/network._js",
@@ -21904,21 +21904,21 @@
                   "bool": true,
                   "short": "-a",
                   "long": "--allocation-method",
-                  "description": "the allocation method [Static][Dynamic]"
+                  "description": "the allocation method, valid values are\n     [Dynamic,Static], default is Dynamic"
                 },
                 {
-                  "flags": "-i, --idletimeout <idletimeout>",
-                  "required": -19,
+                  "flags": "-i, --idle-timeout <idle-timeout>",
+                  "required": -20,
                   "optional": 0,
                   "bool": true,
                   "short": "-i",
-                  "long": "--idletimeout",
+                  "long": "--idle-timeout",
                   "description": "the idle timeout specified in minutes"
                 },
                 {
-                  "flags": "-f, --reverse-fqdn [reverse-fqdn]",
-                  "required": 0,
-                  "optional": -20,
+                  "flags": "-f, --reverse-fqdn <reverse-fqdn>",
+                  "required": -20,
+                  "optional": 0,
                   "bool": true,
                   "short": "-f",
                   "long": "--reverse-fqdn",
@@ -21946,9 +21946,9 @@
             },
             {
               "name": "list",
-              "description": "Get all public ips",
+              "description": "Get all public ip addresses",
               "fullName": "network public-ip list",
-              "usage": "[options] <resource-group>",
+              "usage": "[options]",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
@@ -21998,7 +21998,7 @@
             },
             {
               "name": "show",
-              "description": "Get a public ip",
+              "description": "Get a public ip address",
               "fullName": "network public-ip show",
               "usage": "[options] <resource-group> <name>",
               "filePath": "commands/arm/network/network._js",
@@ -22059,7 +22059,7 @@
             },
             {
               "name": "delete",
-              "description": "Delete a public ip",
+              "description": "Delete a public ip address",
               "fullName": "network public-ip delete",
               "usage": "[options] <resource-group> <name>",
               "filePath": "commands/arm/network/network._js",
@@ -22375,7 +22375,7 @@
                   "description": "the name of the network interface"
                 },
                 {
-                  "flags": "-w, --network-security-group-id [network-security-group-id]>",
+                  "flags": "-w, --network-security-group-id [network-security-group-id]",
                   "required": 0,
                   "optional": -33,
                   "bool": true,
@@ -22384,9 +22384,9 @@
                   "description": "the network security group identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/networkSecurityGroups/<nsg-name>"
                 },
                 {
-                  "flags": "-o, --network-security-group-name <network-security-group-name>",
-                  "required": -35,
-                  "optional": 0,
+                  "flags": "-o, --network-security-group-name [network-security-group-name]",
+                  "required": 0,
+                  "optional": -35,
                   "bool": true,
                   "short": "-o",
                   "long": "--network-security-group-name",
@@ -22402,9 +22402,9 @@
                   "description": "the public IP identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/publicIPAddresses/<public-ip-name>"
                 },
                 {
-                  "flags": "-p, --public-ip-name <public-ip-name>",
-                  "required": -22,
-                  "optional": 0,
+                  "flags": "-p, --public-ip-name [public-ip-name]",
+                  "required": 0,
+                  "optional": -22,
                   "bool": true,
                   "short": "-p",
                   "long": "--public-ip-name",
@@ -22465,9 +22465,9 @@
                   "description": "the comma separated list of load balancer inbound NAT rule identifiers\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/inboundNatRules/<nat-rule-name>"
                 },
                 {
-                  "flags": "-r, --internal-dns-name-label <internal-dns-name-label>",
-                  "required": -31,
-                  "optional": 0,
+                  "flags": "-r, --internal-dns-name-label [internal-dns-name-label]",
+                  "required": 0,
+                  "optional": -31,
                   "bool": true,
                   "short": "-r",
                   "long": "--internal-dns-name-label",
@@ -22506,7 +22506,7 @@
               "name": "list",
               "description": "Get all network interfaces",
               "fullName": "network nic list",
-              "usage": "[options] <resource-group>",
+              "usage": "[options]",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
@@ -22544,13 +22544,22 @@
                   "description": "the name of the resource group"
                 },
                 {
-                  "flags": "-m, --virtual-machine-scale-set <virtual-machine-scale-set>",
-                  "required": -33,
+                  "flags": "-m, --virtual-machine-scale-set-name <virtual-machine-scale-set-name>",
+                  "required": -38,
                   "optional": 0,
                   "bool": true,
                   "short": "-m",
-                  "long": "--virtual-machine-scale-set",
+                  "long": "--virtual-machine-scale-set-name",
                   "description": "the name of the virtual machine scale set"
+                },
+                {
+                  "flags": "-i, --virtual-machine-index <virtual-machine-index>",
+                  "required": -29,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-i",
+                  "long": "--virtual-machine-index",
+                  "description": "the index of the virtual machine in scale set"
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -22614,12 +22623,12 @@
                   "description": "the name of the network interface"
                 },
                 {
-                  "flags": "-m, --virtual-machine-scale-set <virtual-machine-scale-set>",
-                  "required": -33,
+                  "flags": "-m, --virtual-machine-scale-set-name <virtual-machine-scale-set-name>",
+                  "required": -38,
                   "optional": 0,
                   "bool": true,
                   "short": "-m",
-                  "long": "--virtual-machine-scale-set",
+                  "long": "--virtual-machine-scale-set-name",
                   "description": "the name of the virtual machine scale set"
                 },
                 {
@@ -22725,7 +22734,7 @@
                   "name": "add",
                   "description": "Add a backend address pool to a NIC",
                   "fullName": "network nic address-pool add",
-                  "usage": "[options] [resource-group] [name]",
+                  "usage": "[options] <resource-group> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -22813,7 +22822,7 @@
                   "name": "remove",
                   "description": "Remove a backend address pool from a NIC",
                   "fullName": "network nic address-pool remove",
-                  "usage": "[options] [resource-group] [name]",
+                  "usage": "[options] <resource-group> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -22911,7 +22920,7 @@
                   "name": "add",
                   "description": "Add an inbound NAT rule to a NIC",
                   "fullName": "network nic inbound-nat-rule add",
-                  "usage": "[options] [resource-group] [name]",
+                  "usage": "[options] <resource-group> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -22999,7 +23008,7 @@
                   "name": "remove",
                   "description": "Remove an inbound NAT rule from a NIC",
                   "fullName": "network nic inbound-nat-rule remove",
-                  "usage": "[options] [resource-group] [name]",
+                  "usage": "[options] <resource-group> <name>",
                   "filePath": "commands/arm/network/network._js",
                   "options": [
                     {
@@ -23248,7 +23257,7 @@
               "name": "list",
               "description": "Get all network security groups",
               "fullName": "network nsg list",
-              "usage": "[options] <resource-group>",
+              "usage": "[options]",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
