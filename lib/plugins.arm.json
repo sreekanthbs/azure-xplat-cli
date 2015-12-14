@@ -22197,6 +22197,33 @@
                   "description": "the location"
                 },
                 {
+                  "flags": "-u, --subnet-id <subnet-id>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-u",
+                  "long": "--subnet-id",
+                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
+                },
+                {
+                  "flags": "-k, --subnet-name <subnet-name>",
+                  "required": -19,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-k",
+                  "long": "--subnet-name",
+                  "description": "the subnet name"
+                },
+                {
+                  "flags": "-m, --subnet-vnet-name <subnet-vnet-name>",
+                  "required": -24,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-m",
+                  "long": "--subnet-vnet-name",
+                  "description": "the vnet name under which subnet-name exists"
+                },
+                {
                   "flags": "-w, --network-security-group-id <network-security-group-id>",
                   "required": -33,
                   "optional": 0,
@@ -22233,42 +22260,6 @@
                   "description": "the public IP name.\n     This public ip must exist in the same resource group as the nic.\n     Please use public-ip-id if that is not the case."
                 },
                 {
-                  "flags": "-a, --private-ip-address <private-ip-address>",
-                  "required": -26,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-a",
-                  "long": "--private-ip-address",
-                  "description": "the private IP address"
-                },
-                {
-                  "flags": "-u, --subnet-id <subnet-id>",
-                  "required": -17,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-u",
-                  "long": "--subnet-id",
-                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
-                },
-                {
-                  "flags": "-k, --subnet-name <subnet-name>",
-                  "required": -19,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-k",
-                  "long": "--subnet-name",
-                  "description": "the subnet name"
-                },
-                {
-                  "flags": "-m, --subnet-vnet-name <subnet-vnet-name>",
-                  "required": -24,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-m",
-                  "long": "--subnet-vnet-name",
-                  "description": "the vnet name under which subnet-name exists"
-                },
-                {
                   "flags": "-d, --lb-address-pool-ids <lb-address-pool-ids>",
                   "required": -27,
                   "optional": 0,
@@ -22285,6 +22276,15 @@
                   "short": "-e",
                   "long": "--lb-inbound-nat-rule-ids",
                   "description": "the comma separated list of load balancer inbound NAT rule identifiers\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/inboundNatRules/<nat-rule-name>"
+                },
+                {
+                  "flags": "-a, --private-ip-address <private-ip-address>",
+                  "required": -26,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-a",
+                  "long": "--private-ip-address",
+                  "description": "the private IP address"
                 },
                 {
                   "flags": "-r, --internal-dns-name-label <internal-dns-name-label>",
@@ -22375,6 +22375,33 @@
                   "description": "the name of the network interface"
                 },
                 {
+                  "flags": "-u, --subnet-id <subnet-id>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-u",
+                  "long": "--subnet-id",
+                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
+                },
+                {
+                  "flags": "-k, --subnet-name <subnet-name>",
+                  "required": -19,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-k",
+                  "long": "--subnet-name",
+                  "description": "the subnet name"
+                },
+                {
+                  "flags": "-m, --subnet-vnet-name <subnet-vnet-name>",
+                  "required": -24,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-m",
+                  "long": "--subnet-vnet-name",
+                  "description": "the vnet name under which subnet-name exists"
+                },
+                {
                   "flags": "-w, --network-security-group-id [network-security-group-id]",
                   "required": 0,
                   "optional": -33,
@@ -22411,42 +22438,6 @@
                   "description": "the public IP name.\n     This public ip must exist in the same resource group as the nic.\n     Please use public-ip-id if that is not the case."
                 },
                 {
-                  "flags": "-a, --private-ip-address <private-ip-address>",
-                  "required": -26,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-a",
-                  "long": "--private-ip-address",
-                  "description": "the private IP address"
-                },
-                {
-                  "flags": "-u, --subnet-id <subnet-id>",
-                  "required": -17,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-u",
-                  "long": "--subnet-id",
-                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
-                },
-                {
-                  "flags": "-k, --subnet-name <subnet-name>",
-                  "required": -19,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-k",
-                  "long": "--subnet-name",
-                  "description": "the subnet name"
-                },
-                {
-                  "flags": "-m, --subnet-vnet-name <subnet-vnet-name>",
-                  "required": -24,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-m",
-                  "long": "--subnet-vnet-name",
-                  "description": "the vnet name under which subnet-name exists"
-                },
-                {
                   "flags": "-d, --lb-address-pool-ids [lb-address-pool-ids]",
                   "required": 0,
                   "optional": -27,
@@ -22463,6 +22454,15 @@
                   "short": "-e",
                   "long": "--lb-inbound-nat-rule-ids",
                   "description": "the comma separated list of load balancer inbound NAT rule identifiers\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/inboundNatRules/<nat-rule-name>"
+                },
+                {
+                  "flags": "-a, --private-ip-address <private-ip-address>",
+                  "required": -26,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-a",
+                  "long": "--private-ip-address",
+                  "description": "the private IP address"
                 },
                 {
                   "flags": "-r, --internal-dns-name-label [internal-dns-name-label]",
@@ -27062,25 +27062,7 @@
                   "bool": true,
                   "short": "-n",
                   "long": "--name",
-                  "description": "the name of the local network"
-                },
-                {
-                  "flags": "-a, --address-space <address-space>",
-                  "required": -21,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-a",
-                  "long": "--address-space",
-                  "description": "the local network site address space"
-                },
-                {
-                  "flags": "-i, --ip-address <ip-address>",
-                  "required": -18,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-i",
-                  "long": "--ip-address",
-                  "description": "the IP address of the local network site"
+                  "description": "the name of the local network gateway"
                 },
                 {
                   "flags": "-l, --location <location>",
@@ -27092,13 +27074,22 @@
                   "description": "the location"
                 },
                 {
-                  "flags": "-s, --subscription <subscription>",
-                  "required": -20,
+                  "flags": "-a, --address-space <address-space>",
+                  "required": -21,
                   "optional": 0,
                   "bool": true,
-                  "short": "-s",
-                  "long": "--subscription",
-                  "description": "the subscription identifier"
+                  "short": "-a",
+                  "long": "--address-space",
+                  "description": "the comma separated list of address prefixes in CIDR format"
+                },
+                {
+                  "flags": "-i, --ip-address <ip-address>",
+                  "required": -18,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-i",
+                  "long": "--ip-address",
+                  "description": "the IP address of the local network site"
                 },
                 {
                   "flags": "-t, --tags <tags>",
@@ -27108,6 +27099,15 @@
                   "short": "-t",
                   "long": "--tags",
                   "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
+                },
+                {
+                  "flags": "-s, --subscription <subscription>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
                 }
               ]
             },
@@ -27159,16 +27159,16 @@
                   "bool": true,
                   "short": "-n",
                   "long": "--name",
-                  "description": "the name of the local network"
+                  "description": "the name of the local network gateway"
                 },
                 {
-                  "flags": "-a, --address-space <address-space>",
-                  "required": -21,
-                  "optional": 0,
+                  "flags": "-a, --address-space [address-space]",
+                  "required": 0,
+                  "optional": -21,
                   "bool": true,
                   "short": "-a",
                   "long": "--address-space",
-                  "description": "the local network site address space"
+                  "description": "the comma separated list of address prefixes in CIDR format"
                 },
                 {
                   "flags": "-t, --tags [tags]",
@@ -27194,7 +27194,7 @@
               "name": "list",
               "description": "Get all local networks gateways",
               "fullName": "network local-gateway list",
-              "usage": "[options] <resource-group>",
+              "usage": "[options]",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
@@ -27290,16 +27290,16 @@
                   "bool": true,
                   "short": "-n",
                   "long": "--name",
-                  "description": "the name of the local network"
+                  "description": "the name of the local network gateway"
                 },
                 {
-                  "flags": "-s, --subscription <id>",
+                  "flags": "-s, --subscription <subscription>",
                   "required": -20,
                   "optional": 0,
                   "bool": true,
                   "short": "-s",
                   "long": "--subscription",
-                  "description": "the subscription id"
+                  "description": "the subscription identifier"
                 }
               ]
             },
@@ -27351,7 +27351,7 @@
                   "bool": true,
                   "short": "-n",
                   "long": "--name",
-                  "description": "the name of the local network"
+                  "description": "the name of the local network gateway"
                 },
                 {
                   "flags": "-q, --quiet",
@@ -27363,13 +27363,13 @@
                   "description": "quiet mode, do not ask for delete confirmation"
                 },
                 {
-                  "flags": "-s, --subscription <id>",
+                  "flags": "-s, --subscription <subscription>",
                   "required": -20,
                   "optional": 0,
                   "bool": true,
                   "short": "-s",
                   "long": "--subscription",
-                  "description": "the subscription id"
+                  "description": "the subscription identifier"
                 }
               ]
             }
