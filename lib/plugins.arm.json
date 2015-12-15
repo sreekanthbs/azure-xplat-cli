@@ -18477,7 +18477,7 @@
                   "bool": true,
                   "short": "-a",
                   "long": "--address-prefixes",
-                  "description": "the comma separated list of address prefixes for this virtual network.\n     For example -a 10.0.0.0/24,10.0.1.0/24.\n     Default value is 10.0.0.0/8"
+                  "description": "the comma separated list of address prefixes for this virtual network.\n     For example, -a \"10.0.0.0/24,10.0.1.0/24\"\n     Default value is 10.0.0.0/8"
                 },
                 {
                   "flags": "-d, --dns-servers <dns-servers>",
@@ -18565,7 +18565,7 @@
                   "bool": true,
                   "short": "-a",
                   "long": "--address-prefixes",
-                  "description": "the comma separated list of address prefixes for this virtual network.\n     For example -a 10.0.0.0/24,10.0.1.0/24.\n     This list will be appended to the current list of address prefixes.\n     The address prefixes in this list should not overlap between them.\n     The address prefixes in this list should not overlap with existing address prefixes in the vnet."
+                  "description": "the comma separated list of address prefixes for this virtual network.\n     For example, -a \"10.0.0.0/24,10.0.1.0/24\"\n     This list will be appended to the current list of address prefixes.\n     The address prefixes in this list should not overlap between them.\n     The address prefixes in this list should not overlap with existing address prefixes in the vnet."
                 },
                 {
                   "flags": "-d, --dns-servers [dns-servers]",
@@ -18600,7 +18600,7 @@
               "name": "list",
               "description": "Get all virtual networks",
               "fullName": "network vnet list",
-              "usage": "[options] <resource-group>",
+              "usage": "[options]",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
