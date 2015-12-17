@@ -15,7 +15,7 @@
     "node",
     "azure"
   ],
-  "main": "./Lib/networkManagementClient.js",
+  "main": "./lib/networkManagementClient.js",
   "engines": {
     "node": ">= 0.6.15"
   },
