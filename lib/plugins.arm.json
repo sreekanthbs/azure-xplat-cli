@@ -19765,9 +19765,9 @@
                       "description": "the name of the frontend ip configuration"
                     },
                     {
-                      "flags": "-a, --private-ip-address <private-ip-address>",
-                      "required": -26,
-                      "optional": 0,
+                      "flags": "-a, --private-ip-address [private-ip-address]",
+                      "required": 0,
+                      "optional": -26,
                       "bool": true,
                       "short": "-a",
                       "long": "--private-ip-address",
@@ -20361,7 +20361,7 @@
               "commands": [
                 {
                   "name": "create",
-                  "description": "Add an address pool to the load balancer",
+                  "description": "Add a backend address pool to the load balancer",
                   "fullName": "network lb address-pool create",
                   "usage": "[options] <resource-group> <lb-name> <name>",
                   "filePath": "commands/arm/network/network._js",
@@ -20431,7 +20431,7 @@
                 },
                 {
                   "name": "list",
-                  "description": "Get all address pools in the load balancer",
+                  "description": "Get all backend address pools in the load balancer",
                   "fullName": "network lb address-pool list",
                   "usage": "[options] <resource-group> <lb-name>",
                   "filePath": "commands/arm/network/network._js",
@@ -20492,7 +20492,7 @@
                 },
                 {
                   "name": "delete",
-                  "description": "Delete an address pool from a load balancer",
+                  "description": "Delete a backend address pool from a load balancer",
                   "fullName": "network lb address-pool delete",
                   "usage": "[options] <resource-group> <lb-name> <name>",
                   "filePath": "commands/arm/network/network._js",
