@@ -20645,7 +20645,7 @@
                       "bool": true,
                       "short": "-p",
                       "long": "--protocol",
-                      "description": "the rule protocol"
+                      "description": "the rule protocol [tcp,udp]"
                     },
                     {
                       "flags": "-f, --frontend-port <frontend-port>",
@@ -20684,15 +20684,6 @@
                       "description": "the idle timeout specified in minutes"
                     },
                     {
-                      "flags": "-a, --probe-name <probe-name>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-a",
-                      "long": "--probe-name",
-                      "description": "the name of the probe defined in the same load balancer"
-                    },
-                    {
                       "flags": "-t, --frontend-ip-name <frontend-ip-name>",
                       "required": -24,
                       "optional": 0,
@@ -20702,13 +20693,22 @@
                       "description": "the name of the frontend ip configuration in the same load balancer"
                     },
                     {
-                      "flags": "-o, --backend-address-pool <backend-address-pool>",
-                      "required": -28,
+                      "flags": "-o, --backend-address-pool-name <backend-address-pool-name>",
+                      "required": -33,
                       "optional": 0,
                       "bool": true,
                       "short": "-o",
-                      "long": "--backend-address-pool",
-                      "description": "name of the backend address pool defined in the same load balancer"
+                      "long": "--backend-address-pool-name",
+                      "description": "the name of the backend address pool defined in the same load balancer"
+                    },
+                    {
+                      "flags": "-a, --probe-name <probe-name>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-a",
+                      "long": "--probe-name",
+                      "description": "the name of the probe defined in the same load balancer"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -20781,22 +20781,13 @@
                       "description": "the name of the rule"
                     },
                     {
-                      "flags": "-r, --new-rule-name <new-rule-name>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-r",
-                      "long": "--new-rule-name",
-                      "description": "new rule name"
-                    },
-                    {
                       "flags": "-p, --protocol <protocol>",
                       "required": -16,
                       "optional": 0,
                       "bool": true,
                       "short": "-p",
                       "long": "--protocol",
-                      "description": "the rule protocol"
+                      "description": "the rule protocol [tcp,udp]"
                     },
                     {
                       "flags": "-f, --frontend-port <frontend-port>",
@@ -20835,15 +20826,6 @@
                       "description": "the idle timeout specified in minutes"
                     },
                     {
-                      "flags": "-a, --probe-name [probe-name]",
-                      "required": 0,
-                      "optional": -18,
-                      "bool": true,
-                      "short": "-a",
-                      "long": "--probe-name",
-                      "description": "the name of the probe defined in the same load balancer"
-                    },
-                    {
                       "flags": "-t, --frontend-ip-name <frontend-ip-name>",
                       "required": -24,
                       "optional": 0,
@@ -20853,13 +20835,22 @@
                       "description": "the name of the frontend ip configuration in the same load balancer"
                     },
                     {
-                      "flags": "-o, --backend-address-pool <backend-address-pool>",
-                      "required": -28,
+                      "flags": "-o, --backend-address-pool-name <backend-address-pool-name>",
+                      "required": -33,
                       "optional": 0,
                       "bool": true,
                       "short": "-o",
-                      "long": "--backend-address-pool",
-                      "description": "name of the backend address pool defined in the same load balancer"
+                      "long": "--backend-address-pool-name",
+                      "description": "the name of the backend address pool defined in the same load balancer"
+                    },
+                    {
+                      "flags": "-a, --probe-name [probe-name]",
+                      "required": 0,
+                      "optional": -18,
+                      "bool": true,
+                      "short": "-a",
+                      "long": "--probe-name",
+                      "description": "the name of the probe defined in the same load balancer"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
