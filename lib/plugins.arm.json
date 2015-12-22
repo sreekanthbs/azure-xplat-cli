@@ -31081,7 +31081,7 @@
               "bool": true,
               "short": "-c",
               "long": "--redis-configuration",
-              "description": "Redis Configuration. Enter a JSON formatted string of configuration keys and values here."
+              "description": "Redis Configuration. Enter a JSON formatted string of configuration keys and values here. Format:\"{\"<key1>\":\"<value1>\",\"<key2>\":\"<value2>\"}\""
             },
             {
               "flags": "-f, --redis-configuration-file <redisConfigurationFile>",
@@ -31090,7 +31090,7 @@
               "bool": true,
               "short": "-f",
               "long": "--redis-configuration-file",
-              "description": "Redis Configuration. Enter the path of a file containing configuration keys and values here.",
+              "description": "Redis Configuration. Enter the path of a file containing configuration keys and values here. Format for the file entry: {\"<key1>\":\"<value1>\",\"<key2>\":\"<value2>\"}",
               "fileRelatedOption": true
             },
             {
