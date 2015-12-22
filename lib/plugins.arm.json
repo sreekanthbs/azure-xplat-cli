@@ -20654,7 +20654,7 @@
                       "bool": true,
                       "short": "-f",
                       "long": "--frontend-port",
-                      "description": "the frontend port"
+                      "description": "the frontend port [0-65535]"
                     },
                     {
                       "flags": "-b, --backend-port <backend-port>",
@@ -20663,7 +20663,7 @@
                       "bool": true,
                       "short": "-b",
                       "long": "--backend-port",
-                      "description": "the backend port"
+                      "description": "the backend port [0-65535]"
                     },
                     {
                       "flags": "-e, --enable-floating-ip <enable-floating-ip>",
@@ -20672,7 +20672,7 @@
                       "bool": true,
                       "short": "-e",
                       "long": "--enable-floating-ip",
-                      "description": "enable floating point ip"
+                      "description": "enable floating point ip [true, false]"
                     },
                     {
                       "flags": "-i, --idle-timeout <idle-timeout>",
@@ -20796,7 +20796,7 @@
                       "bool": true,
                       "short": "-f",
                       "long": "--frontend-port",
-                      "description": "the frontend port"
+                      "description": "the frontend port [0-65535]"
                     },
                     {
                       "flags": "-b, --backend-port <backend-port>",
@@ -20805,7 +20805,7 @@
                       "bool": true,
                       "short": "-b",
                       "long": "--backend-port",
-                      "description": "the backend port"
+                      "description": "the backend port [0-65535]"
                     },
                     {
                       "flags": "-e, --enable-floating-ip <enable-floating-ip>",
@@ -20814,7 +20814,7 @@
                       "bool": true,
                       "short": "-e",
                       "long": "--enable-floating-ip",
-                      "description": "enable floating point ip"
+                      "description": "enable floating point ip [true, false]"
                     },
                     {
                       "flags": "-i, --idle-timeout <idle-timeout>",
@@ -21106,15 +21106,24 @@
                       "bool": true,
                       "short": "-e",
                       "long": "--enable-floating-ip",
-                      "description": "enable floating point ip [true,false]"
+                      "description": "enable floating point ip [true, false]"
                     },
                     {
-                      "flags": "-i, --frontend-ip <frontend-ip>",
-                      "required": -19,
+                      "flags": "-i, --idle-timeout <idle-timeout>",
+                      "required": -20,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--frontend-ip",
+                      "long": "--idle-timeout",
+                      "description": "the idle timeout specified in minutes"
+                    },
+                    {
+                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-i",
+                      "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
                     {
@@ -21221,15 +21230,24 @@
                       "bool": true,
                       "short": "-e",
                       "long": "--enable-floating-ip",
-                      "description": "enable floating point ip [true,false]"
+                      "description": "enable floating point ip [true, false]"
                     },
                     {
-                      "flags": "-i, --frontend-ip <frontend-ip>",
-                      "required": -19,
+                      "flags": "-i, --idle-timeout <idle-timeout>",
+                      "required": -20,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--frontend-ip",
+                      "long": "--idle-timeout",
+                      "description": "the idle timeout specified in minutes"
+                    },
+                    {
+                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-i",
+                      "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
                     {
@@ -21486,15 +21504,15 @@
                       "bool": true,
                       "short": "-b",
                       "long": "--backend-port",
-                      "description": "the backend port"
+                      "description": "the backend port [0-65535]"
                     },
                     {
-                      "flags": "-i, --frontend-ip <frontend-ip>",
-                      "required": -19,
+                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "required": -24,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--frontend-ip",
+                      "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
                     {
@@ -21601,15 +21619,15 @@
                       "bool": true,
                       "short": "-b",
                       "long": "--backend-port",
-                      "description": "the backend port"
+                      "description": "the backend port [0-65535]"
                     },
                     {
-                      "flags": "-i, --frontend-ip <frontend-ip>",
-                      "required": -19,
+                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "required": -24,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--frontend-ip",
+                      "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
                     {
@@ -22354,7 +22372,7 @@
                   "bool": true,
                   "short": "-f",
                   "long": "--enable-ip-forwarding",
-                  "description": "the ip forwarding, valid values are [true, false]"
+                  "description": "enable ip forwarding [true, false]"
                 },
                 {
                   "flags": "-t, --tags <tags>",
@@ -22532,7 +22550,7 @@
                   "bool": true,
                   "short": "-f",
                   "long": "--enable-ip-forwarding",
-                  "description": "the ip forwarding, valid values are [true, false]"
+                  "description": "enable ip forwarding [true, false]"
                 },
                 {
                   "flags": "-t, --tags [tags]",
@@ -27634,7 +27652,7 @@
                   "bool": true,
                   "short": "-b",
                   "long": "--enable-bgp",
-                  "description": "enables BGP flag\n   Valid values are [True, False]\n   Default is False"
+                  "description": "enable bgp [true, false]"
                 },
                 {
                   "flags": "-t, --tags <tags>",
