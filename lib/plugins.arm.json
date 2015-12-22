@@ -26978,15 +26978,6 @@
                       "description": "the express route circuit peering type,\n     supported types [AzurePrivatePeering,AzurePublicPeering,MicrosoftPeering}"
                     },
                     {
-                      "flags": "-e, --state <state>",
-                      "required": -13,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-e",
-                      "long": "--state",
-                      "description": "the express route circuit peering state,\n     valid values are [Disabled,Enabled]"
-                    },
-                    {
                       "flags": "-a, --azure-asn <azure-asn>",
                       "required": -17,
                       "optional": 0,
@@ -27092,7 +27083,7 @@
                       "bool": true,
                       "short": "-u",
                       "long": "--ms-routing-registry-name",
-                      "description": "Internet Routing Registry / Regional Internet Registry,\n     supported values are [ARIN,APNIC,AFRINIC,LACNIC,RIPE NCC,RADB,ALTDB,LEVEL3]"
+                      "description": "Internet Routing Registry / Regional Internet Registry,\n     supported values are [ARIN,APNIC,AFRINIC,LACNIC,RIPENCC,RADB,ALTDB,LEVEL3]"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -27174,15 +27165,6 @@
                       "description": "the express route circuit peering type,\n     supported types [AzurePrivatePeering,AzurePublicPeering,MicrosoftPeering}"
                     },
                     {
-                      "flags": "-e, --state <state>",
-                      "required": -13,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-e",
-                      "long": "--state",
-                      "description": "the express route circuit peering state"
-                    },
-                    {
                       "flags": "-a, --azure-asn <azure-asn>",
                       "required": -17,
                       "optional": 0,
@@ -27288,7 +27270,7 @@
                       "bool": true,
                       "short": "-u",
                       "long": "--ms-routing-registry-name",
-                      "description": "Internet Routing Registry / Regional Internet Registry,\n     supported values are [ARIN,APNIC,AFRINIC,LACNIC,RIPE NCC,RADB,ALTDB,LEVEL3]"
+                      "description": "Internet Routing Registry / Regional Internet Registry,\n     supported values are [ARIN,APNIC,AFRINIC,LACNIC,RIPENCC,RADB,ALTDB,LEVEL3]"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
