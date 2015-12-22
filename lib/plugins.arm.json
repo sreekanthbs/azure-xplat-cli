@@ -22273,7 +22273,7 @@
                   "bool": true,
                   "short": "-u",
                   "long": "--subnet-id",
-                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
+                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/VirtualNetworks/<vnet-name>/subnets/<subnet-name>"
                 },
                 {
                   "flags": "-k, --subnet-name <subnet-name>",
@@ -22451,7 +22451,7 @@
                   "bool": true,
                   "short": "-u",
                   "long": "--subnet-id",
-                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/<vnet-name>/subnets/<subnet-name>"
+                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/VirtualNetworks/<vnet-name>/subnets/<subnet-name>"
                 },
                 {
                   "flags": "-k, --subnet-name <subnet-name>",
@@ -22851,8 +22851,8 @@
                       "description": "the name of the network interface"
                     },
                     {
-                      "flags": "-i, --lb-address-pool-id  <lb-address-pool-id>",
-                      "required": -27,
+                      "flags": "-i, --lb-address-pool-id <lb-address-pool-id>",
+                      "required": -26,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
@@ -22939,8 +22939,8 @@
                       "description": "the name of the network interface"
                     },
                     {
-                      "flags": "-i, --lb-address-pool-id  <lb-address-pool-id>",
-                      "required": -27,
+                      "flags": "-i, --lb-address-pool-id <lb-address-pool-id>",
+                      "required": -26,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
@@ -27616,7 +27616,7 @@
                   "bool": true,
                   "short": "-f",
                   "long": "--subnet-id",
-                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/virtualNetworks/MyTestNetwork/subnets/<subnet-name>"
+                  "description": "the subnet identifier.\n     e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/VirtualNetworks/<vnet-name>/subnets/<subnet-name>"
                 },
                 {
                   "flags": "-m, --vnet-name <vnet-name>",
