@@ -18495,7 +18495,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this virtual network.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -18577,21 +18577,13 @@
                   "description": "the comma separated list of DNS servers IP addresses.\n     This list will be appended to the current list of DNS server IP addresses."
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this virtual network.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional. For example, -t \"tag1=value1;tag2\".\n     Existing tag values will be replaced by the values specified."
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -19314,7 +19306,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional. For example, -t \"tag1=value1;tag2\""
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -20640,6 +20632,15 @@
                       "description": "the name of the probe defined in the same load balancer"
                     },
                     {
+                      "flags": "-d, --load-distribution <load-distribution>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-d",
+                      "long": "--load-distribution",
+                      "description": "client session persistence"
+                    },
+                    {
                       "flags": "-t, --frontend-ip-name <frontend-ip-name>",
                       "required": -24,
                       "optional": 0,
@@ -20789,6 +20790,15 @@
                       "short": "-a",
                       "long": "--probe-name",
                       "description": "the name of the probe defined in the same load balancer"
+                    },
+                    {
+                      "flags": "-d, --load-distribution <load-distribution>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-d",
+                      "long": "--load-distribution",
+                      "description": "client session persistence"
                     },
                     {
                       "flags": "-t, --frontend-ip-name <frontend-ip-name>",
@@ -21933,21 +21943,13 @@
                   "description": "the reverse fqdn"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
                   "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -22327,7 +22329,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the comma seperated list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -22499,21 +22501,13 @@
                   "description": "the ip forwarding, valid values are [true, false]"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
                   "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -23249,21 +23243,13 @@
                   "description": "the name of the network security group"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
                   "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -24121,21 +24107,13 @@
                       "description": "the name of the DNS zone"
                     },
                     {
-                      "flags": "-t, --tags <tags>",
-                      "required": -12,
-                      "optional": 0,
+                      "flags": "-t, --tags [tags]",
+                      "required": 0,
+                      "optional": -12,
                       "bool": true,
                       "short": "-t",
                       "long": "--tags",
                       "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                    },
-                    {
-                      "flags": "--no-tags",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": false,
-                      "long": "--no-tags",
-                      "description": "remove all existing tags"
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -24598,7 +24576,7 @@
                       "bool": true,
                       "short": "-t",
                       "long": "--tags",
-                      "description": "the tags set on this virtual network.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
+                      "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -24689,21 +24667,13 @@
                       "description": "time to live specified in seconds"
                     },
                     {
-                      "flags": "-t, --tags <tags>",
-                      "required": -12,
-                      "optional": 0,
+                      "flags": "-t, --tags [tags]",
+                      "required": 0,
+                      "optional": -12,
                       "bool": true,
                       "short": "-t",
                       "long": "--tags",
-                      "description": "the tags set on this virtual network.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                    },
-                    {
-                      "flags": "--no-tags",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": false,
-                      "long": "--no-tags",
-                      "description": "remove all existing tags"
+                      "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -25539,7 +25509,7 @@
                       "bool": true,
                       "short": "-t",
                       "long": "--tags",
-                      "description": "the tags set on this profile. Can be \n     multiple, in the format of 'name=value'.\n     Name is required and value is optional. \n     For example, -t \"tag1=value1;tag2\""
+                      "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -25657,21 +25627,13 @@
                       "description": "the monitoring path"
                     },
                     {
-                      "flags": "-t, --tags <tags>",
-                      "required": -12,
-                      "optional": 0,
+                      "flags": "-t, --tags [tags]",
+                      "required": 0,
+                      "optional": -12,
                       "bool": true,
                       "short": "-t",
                       "long": "--tags",
-                      "description": "the tags set on this profile. Can be \n     multiple, in the format of 'name=value'.\n     Name is required and value is optional. \n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
-                    },
-                    {
-                      "flags": "--no-tags",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": false,
-                      "long": "--no-tags",
-                      "description": "remove all existing tags"
+                      "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -26440,7 +26402,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional. For example, -t \"tag1=value1;tag2\""
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -27154,7 +27116,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this local network gateway.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 }
               ]
             },
@@ -27218,21 +27180,13 @@
                   "description": "the local network site address space"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this local network gateway.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional. For example, -t \"tag1=value1;tag2\".\n     Existing tag values will be replaced by the values specified."
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -27576,7 +27530,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this virtual network gateway.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -27640,21 +27594,13 @@
                   "description": "the name of the virtual network gateway"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this virtual network gateway.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional. For example, -t \"tag1=value1;tag2\".\n     Existing tag values will be replaced by the values specified."
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -27989,7 +27935,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on this connection.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 }
               ]
             },
@@ -30349,7 +30295,7 @@
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on express route.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -30440,21 +30386,13 @@
                   "description": "the sku family"
                 },
                 {
-                  "flags": "-t, --tags <tags>",
-                  "required": -12,
-                  "optional": 0,
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
                   "bool": true,
                   "short": "-t",
                   "long": "--tags",
-                  "description": "the tags set on express route.\n   Can be multiple, in the format of \"name=value\".\n   Name is required and value is optional.\n   For example, -t tag1=value1;tag2"
-                },
-                {
-                  "flags": "--no-tags",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": false,
-                  "long": "--no-tags",
-                  "description": "remove all existing tags"
+                  "description": "the list of tags.\n     Can be multiple. In the format of \"name=value\".\n     Name is required and value is optional.\n     Existing tag values will be replaced by the values specified.\n     For example, -t \"tag1=value1;tag2\""
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
@@ -32109,7 +32047,7 @@
           "name": "list",
           "description": "Lists Azure RBAC roles available for assignment. Use this command to determine what actions on what resource types an Azure RBAC role allows.",
           "fullName": "role list",
-          "usage": "\n\n           -----    Example 1   -------\n           azure role list\n           Lists all RBAC role definitions.\n",
+          "usage": "[scope]\n\n           -----    Example 1   -------\n           azure role list\n           Lists all RBAC role definitions.\n",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -32146,6 +32084,22 @@
               "description": "If specified, display only the custom role definitions instead of all role definitions."
             },
             {
+              "flags": "--scope <scope>",
+              "required": -9,
+              "optional": 0,
+              "bool": true,
+              "long": "--scope",
+              "description": "Role definition scope. For e.g. /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f"
+            },
+            {
+              "flags": "--atScopeAndBelow",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--atScopeAndBelow",
+              "description": "If specified, displays all role definitions."
+            },
+            {
               "flags": "-d --detailed",
               "required": 0,
               "optional": 0,
@@ -32168,7 +32122,7 @@
           "name": "show",
           "description": "Search for a role definition with role name or id to view its details. To inspect individual operations that a role grants access to, review the Actions and NotActions properties of the role.",
           "fullName": "role show",
-          "usage": "[name] [id]\n\n           -----    Example 1   -------\n           azure role show --name Reader\n           Get the Reader role definition.\n           -----    Example 2   -------\n           azure role show --id 52a6cc13-ff92-47a8-a39b-2a8205c3087e\n           Get the Reader role definition.\n",
+          "usage": "[name] [id] [scope]\n\n           -----    Example 1   -------\n           azure role show --name Reader\n           Get the Reader role definition.\n           -----    Example 2   -------\n           azure role show --id 52a6cc13-ff92-47a8-a39b-2a8205c3087e\n           Get the Reader role definition.\n",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -32212,6 +32166,22 @@
               "bool": true,
               "long": "--id",
               "description": "Role definition Id."
+            },
+            {
+              "flags": "--scope <scope>",
+              "required": -9,
+              "optional": 0,
+              "bool": true,
+              "long": "--scope",
+              "description": "Role definition scope. For e.g. /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f"
+            },
+            {
+              "flags": "--atScopeAndBelow",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--atScopeAndBelow",
+              "description": "If specified, displays all role definitions."
             },
             {
               "flags": "--subscription <subscription>",
@@ -32285,7 +32255,7 @@
         },
         {
           "name": "set",
-          "description": "Modifies a custom role in Azure RBAC. Provide the modified role definition either as a JSON file or as a JSON-formatted string containing the role definition.\n     The role definition for the updated custom role MUST contain the Id property. The role definition SHOULD contain at least one property that is being updated: DisplayName, Description, Actions, NotActions, AssignableScopes.\n\n     Following is a sample updated role definition json that can be provided as input:\n\n     {\n     \"Id\": \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\",\n     \"Description\": \"Can monitor all resources and start and restart virtual machines\",\n     \"Actions\": [\n       \"*/read\",\n       \"Microsoft.ClassicCompute/virtualmachines/restart/action\",\n       \"Microsoft.ClassicCompute/virtualmachines/start/action\"\n     ]\n     }",
+          "description": "Modifies a custom role in Azure RBAC. Provide the modified role definition either as a JSON file or as a JSON-formatted string containing the role definition.\n     The role definition for the updated custom role MUST contain the Id and all other required properties of the role even if they are not updated: Name, Description, Actions, AssignableScopes. NotActions is optional.\n\n     Following is a sample updated role definition json that can be provided as input:\n\n     {\n     \"Id\": \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\",\n     \"Name\": \"Updated Role\",\n     \"Description\": \"Can monitor all resources and start and restart virtual machines\",\n     \"Actions\": [\n       \"*/read\",\n       \"Microsoft.ClassicCompute/virtualmachines/restart/action\",\n       \"Microsoft.ClassicCompute/virtualmachines/start/action\"\n     ],\n     \"AssignableScopes\": [\"/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f\"]\n     }",
           "fullName": "role set",
           "usage": "[inputfile] [roledefinition]\n     --------------------------  Create using JSON file  --------------------------\n     azure role set --inputfile C:\\Temp\\roleDefinition.json",
           "filePath": "commands/arm/role/role.definition._js",
@@ -32322,7 +32292,7 @@
               "bool": true,
               "short": "-f",
               "long": "--inputfile",
-              "description": "File name containing a single role definition to be updated. Only include the properties that are to be updated in the JSON. Id property is Required."
+              "description": "File name containing a single json role definition to be updated. Id, Name, Description, Actions and AssignableScopes are required."
             },
             {
               "flags": "-r --roledefinition <roledefinition>",
@@ -32347,7 +32317,7 @@
           "name": "delete",
           "description": "Deletes a custom role in Azure RBAC. The role to be deleted is specified using the Id or Name property of the role. Delete will fail if there are existing role assignments made to the custom role.",
           "fullName": "role delete",
-          "usage": "[id] [name]\n\n     --------------------------  Example 1  --------------------------\n     azure role delete --name \"Contoso On-call\"\n\n     --------------------------  Example 2  --------------------------\n     azure role delete --id \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\"",
+          "usage": "[id] [name] [scope]\n\n     --------------------------  Example 1  --------------------------\n     azure role delete --name \"Contoso On-call\"\n\n     --------------------------  Example 2  --------------------------\n     azure role delete --id \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\"",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -32391,6 +32361,14 @@
               "short": "-n",
               "long": "--name",
               "description": "Name of the Role definition to be deleted."
+            },
+            {
+              "flags": "--scope <scope>",
+              "required": -9,
+              "optional": 0,
+              "bool": true,
+              "long": "--scope",
+              "description": "Role definition scope.  For e.g. /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f"
             },
             {
               "flags": "-q --quiet",
@@ -36672,6 +36650,94 @@
                   "short": "-k",
                   "long": "--sku",
                   "description": "the sku"
+                },
+                {
+                  "flags": "-s, --subscription <subscription>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "show",
+              "description": "Lists the virtual machines images",
+              "fullName": "vm image show",
+              "usage": "[options] <location> <publisher> [offer] [sku]",
+              "filePath": "commands/arm/vm/vm._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-l, --location <location>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--location",
+                  "description": "the location"
+                },
+                {
+                  "flags": "-p, --publisher <publisher>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-p",
+                  "long": "--publisher",
+                  "description": "the publisher name"
+                },
+                {
+                  "flags": "-o, --offer <offer>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-o",
+                  "long": "--offer",
+                  "description": "the offer"
+                },
+                {
+                  "flags": "-k, --sku <sku>",
+                  "required": -11,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-k",
+                  "long": "--sku",
+                  "description": "the sku"
+                },
+                {
+                  "flags": "-v, --version <version>",
+                  "required": -15,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--version",
+                  "description": "the version"
                 },
                 {
                   "flags": "-s, --subscription <subscription>",
