@@ -21118,11 +21118,11 @@
                       "description": "the idle timeout specified in minutes"
                     },
                     {
-                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "flags": "-t, --frontend-ip-name <frontend-ip-name>",
                       "required": -24,
                       "optional": 0,
                       "bool": true,
-                      "short": "-i",
+                      "short": "-t",
                       "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
@@ -21242,11 +21242,11 @@
                       "description": "the idle timeout specified in minutes"
                     },
                     {
-                      "flags": "-i, --frontend-ip-name <frontend-ip-name>",
+                      "flags": "-t, --frontend-ip-name <frontend-ip-name>",
                       "required": -24,
                       "optional": 0,
                       "bool": true,
-                      "short": "-i",
+                      "short": "-t",
                       "long": "--frontend-ip-name",
                       "description": "the name of the frontend ip configuration"
                     },
