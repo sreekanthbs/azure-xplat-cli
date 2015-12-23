@@ -27334,7 +27334,7 @@
               "name": "list",
               "description": "Get all local networks gateways",
               "fullName": "network local-gateway list",
-              "usage": "[options]",
+              "usage": "[options] <resource-group>",
               "filePath": "commands/arm/network/network._js",
               "options": [
                 {
