@@ -22857,7 +22857,7 @@
                       "bool": true,
                       "short": "-i",
                       "long": "--lb-address-pool-id",
-                      "description": "the load balancer address pool identifier\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/backendAddressPools/<address-pool-name>"
+                      "description": "the load balancer backend address pool identifier\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/backendAddressPools/<address-pool-name>"
                     },
                     {
                       "flags": "-l, --lb-name <lb-name>",
@@ -22866,16 +22866,16 @@
                       "bool": true,
                       "short": "-l",
                       "long": "--lb-name",
-                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC.\n   Please use --lb-address-pool-id if that is not the case.\n   This parameter will be ignored if --lb-address-pool-id is specified"
+                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC."
                     },
                     {
-                      "flags": "-a, --address-pool-name <address-pool-name>",
-                      "required": -25,
+                      "flags": "-a, --lb-address-pool-name <lb-address-pool-name>",
+                      "required": -28,
                       "optional": 0,
                       "bool": true,
                       "short": "-a",
-                      "long": "--address-pool-name",
-                      "description": "the name of the address pool that exists in the load balancer identified by --lb-name\n   This parameter will be ignored if --lb-address-pool-id is specified"
+                      "long": "--lb-address-pool-name",
+                      "description": "the name of the address pool that exists in the load balancer\n   Please use --lb-address-pool-id if that is not the case."
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -22945,7 +22945,7 @@
                       "bool": true,
                       "short": "-i",
                       "long": "--lb-address-pool-id",
-                      "description": "the load balancer address pool identifier\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/backendAddressPools/<address-pool-name>"
+                      "description": "the load balancer backend address pool identifier\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/backendAddressPools/<address-pool-name>"
                     },
                     {
                       "flags": "-l, --lb-name <lb-name>",
@@ -22954,16 +22954,16 @@
                       "bool": true,
                       "short": "-l",
                       "long": "--lb-name",
-                      "description": "the load balancer name.\n   This load balancer must exist in the same resource group as the NIC.\n   Please use --lb-address-pool-id if that is not the case.\n   This parameter will be ignored if --lb-address-pool-id is specified"
+                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC."
                     },
                     {
-                      "flags": "-a, --address-pool-name <address-pool-name>",
-                      "required": -25,
+                      "flags": "-a, --lb-address-pool-name <lb-address-pool-name>",
+                      "required": -28,
                       "optional": 0,
                       "bool": true,
                       "short": "-a",
-                      "long": "--address-pool-name",
-                      "description": "the name of the address pool that exists in the load balancer identified by --lb-name\n   This parameter will be ignored if --lb-address-pool-id is specified"
+                      "long": "--lb-address-pool-name",
+                      "description": "the name of the address pool that exists in the load balancer\n   Please use --lb-address-pool-id if that is not the case."
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -22981,7 +22981,7 @@
             },
             "inbound-nat-rule": {
               "name": "inbound-nat-rule",
-              "description": "Commands to manage inbound rules of the network interface",
+              "description": "Commands to manage inbound NAT rules of the network interface",
               "fullName": "network nic inbound-nat-rule",
               "usage": "[options] [command]",
               "options": [],
@@ -23037,12 +23037,12 @@
                       "description": "the name of the network interface"
                     },
                     {
-                      "flags": "-i, --inbound-nat-rule-id <inbound-nat-rule-id>",
-                      "required": -27,
+                      "flags": "-i, --lb-inbound-nat-rule-id <lb-inbound-nat-rule-id>",
+                      "required": -30,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--inbound-nat-rule-id",
+                      "long": "--lb-inbound-nat-rule-id",
                       "description": "the inbound NAT rule identifier.\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/inboundNatRules/<nat-rule-name>"
                     },
                     {
@@ -23052,16 +23052,16 @@
                       "bool": true,
                       "short": "-l",
                       "long": "--lb-name",
-                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC.\n   Please use --inbound-nat-rule-id if that is not the case.\n   This parameter will be ignored if --inbound-nat-rule-id is specified"
+                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC."
                     },
                     {
-                      "flags": "-r, --inbound-nat-rule-name <inbound-nat-rule-name>",
-                      "required": -29,
+                      "flags": "-r, --lb-inbound-nat-rule-name <lb-inbound-nat-rule-name>",
+                      "required": -32,
                       "optional": 0,
                       "bool": true,
                       "short": "-r",
-                      "long": "--inbound-nat-rule-name",
-                      "description": "the name of the NAT rule that exists in the load balancer identified by --lb-name"
+                      "long": "--lb-inbound-nat-rule-name",
+                      "description": "the name of the inbound NAT rule that exists in the load balancer.\n   Please use --inbound-nat-rule-id if that is not the case."
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
@@ -23125,12 +23125,12 @@
                       "description": "the name of the network interface"
                     },
                     {
-                      "flags": "-i, --inbound-nat-rule-id <inbound-nat-rule-id>",
-                      "required": -27,
+                      "flags": "-i, --lb-inbound-nat-rule-id <lb-inbound-nat-rule-id>",
+                      "required": -30,
                       "optional": 0,
                       "bool": true,
                       "short": "-i",
-                      "long": "--inbound-nat-rule-id",
+                      "long": "--lb-inbound-nat-rule-id",
                       "description": "the inbound NAT rule identifier.\n   e.g. /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/loadbalancers/<lb-name>/inboundNatRules/<nat-rule-name>"
                     },
                     {
@@ -23140,16 +23140,16 @@
                       "bool": true,
                       "short": "-l",
                       "long": "--lb-name",
-                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC.\n   Please use --inbound-nat-rule-id if that is not the case.\n   This parameter will be ignored if --inbound-nat-rule-id is specified"
+                      "description": "the load balancer name.\n   This load balancer must exists in the same resource group as the NIC."
                     },
                     {
-                      "flags": "-r, --inbound-nat-rule-name <inbound-nat-rule-name>",
-                      "required": -29,
+                      "flags": "-r, --lb-inbound-nat-rule-name <lb-inbound-nat-rule-name>",
+                      "required": -32,
                       "optional": 0,
                       "bool": true,
                       "short": "-r",
-                      "long": "--inbound-nat-rule-name",
-                      "description": "the name of the NAT rule that exists in the load balancer identified by --lb-name"
+                      "long": "--lb-inbound-nat-rule-name",
+                      "description": "the name of the inbound NAT rule that exists in the load balancer.\n   Please use --inbound-nat-rule-id if that is not the case."
                     },
                     {
                       "flags": "-s, --subscription <subscription>",
