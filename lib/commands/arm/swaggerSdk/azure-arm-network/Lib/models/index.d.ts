@@ -925,7 +925,7 @@ export interface ExpressRouteServiceProvider {
  * @member {string} [etag] A unique read-only string that changes whenever the
  * resource is updated
  * 
- * @member {string} addressPrefix Gets or sets Address prefix for the subnet.
+ * @member {string} [addressPrefix] Gets or sets Address prefix for the subnet.
  * 
  * @member {object} [networkSecurityGroup] Gets or sets the reference of the
  * NetworkSecurityGroup resource
@@ -975,7 +975,7 @@ export interface ExpressRouteServiceProvider {
 export interface Subnet extends SubResource {
     name?: string;
     etag?: string;
-    addressPrefix: string;
+    addressPrefix?: string;
     networkSecurityGroup?: NetworkSecurityGroup;
     routeTable?: RouteTable;
     ipConfigurations?: IPConfiguration[];
@@ -1697,11 +1697,11 @@ export interface BackendAddressPool extends SubResource {
  * 
  * @member {string} [backendIPConfiguration.provisioningState]
  * 
- * @member {string} protocol Gets or sets the transport potocol for the
+ * @member {string} [protocol] Gets or sets the transport potocol for the
  * external endpoint. Possible values are Udp or Tcp. Possible values for
  * this property include: 'Udp', 'Tcp'.
  * 
- * @member {number} frontendPort Gets or sets the port for the external
+ * @member {number} [frontendPort] Gets or sets the port for the external
  * endpoint. You can spcify any port number you choose, but the port numbers
  * specified for each role in the service must be unique. Possible values
  * range between 1 and 65535, inclusive
@@ -1720,11 +1720,11 @@ export interface BackendAddressPool extends SubResource {
  * default value is 4 minutes. This emlement is only used when the protocol
  * is set to Tcp
  * 
- * @member {boolean} enableFloatingIP Configures a virtual machine's endpoint
- * for the floating IP capability required to configure a SQL AlwaysOn
- * availability Group. This setting is required when using the SQL Always ON
- * availability Groups in SQL server. This setting can't be changed after you
- * create the endpoint
+ * @member {boolean} [enableFloatingIP] Configures a virtual machine's
+ * endpoint for the floating IP capability required to configure a SQL
+ * AlwaysOn availability Group. This setting is required when using the SQL
+ * Always ON availability Groups in SQL server. This setting can't be changed
+ * after you create the endpoint
  * 
  * @member {string} [provisioningState] Gets or sets Provisioning state of the
  * PublicIP resource Updating/Deleting/Failed
@@ -1735,11 +1735,11 @@ export interface InboundNatRule extends SubResource {
     etag?: string;
     frontendIPConfiguration?: SubResource;
     backendIPConfiguration?: NetworkInterfaceIPConfiguration;
-    protocol: string;
-    frontendPort: number;
+    protocol?: string;
+    frontendPort?: number;
     backendPort?: number;
     idleTimeoutInMinutes?: number;
-    enableFloatingIP: boolean;
+    enableFloatingIP?: boolean;
     provisioningState?: string;
 }
 
@@ -1751,9 +1751,9 @@ export interface InboundNatRule extends SubResource {
  * @member {string} [etag] Gets a unique read-only string that changes
  * whenever the resource is updated
  * 
- * @member {string} publicIPAllocationMethod Gets or sets PublicIP allocation
- * method (Static/Dynamic). Possible values for this property include:
- * 'Static', 'Dynamic'.
+ * @member {string} [publicIPAllocationMethod] Gets or sets PublicIP
+ * allocation method (Static/Dynamic). Possible values for this property
+ * include: 'Static', 'Dynamic'.
  * 
  * @member {object} [ipConfiguration]
  * 
@@ -1871,7 +1871,7 @@ export interface InboundNatRule extends SubResource {
  */
 export interface PublicIPAddress extends Resource {
     etag?: string;
-    publicIPAllocationMethod: string;
+    publicIPAllocationMethod?: string;
     ipConfiguration?: IPConfiguration;
     dnsSettings?: PublicIPAddressDnsSettings;
     ipAddress?: string;
@@ -2560,7 +2560,7 @@ export interface InboundNatPool extends SubResource {
  * @member {string} [etag] A unique read-only string that changes whenever the
  * resource is updated
  * 
- * @member {number} [allocatedOutboundPort] Gets or sets the number of
+ * @member {number} [allocatedOutboundPorts] Gets or sets the number of
  * outbound ports to be used for SNAT
  * 
  * @member {array} [frontendIPConfigurations] Gets or sets Frontend IP
@@ -2579,7 +2579,7 @@ export interface InboundNatPool extends SubResource {
 export interface OutboundNatRule extends SubResource {
     name?: string;
     etag?: string;
-    allocatedOutboundPort?: number;
+    allocatedOutboundPorts?: number;
     frontendIPConfigurations?: SubResource[];
     backendAddressPool: SubResource;
     provisioningState?: string;
