@@ -27,6 +27,7 @@ var allocationMethod = 'Static';
 var idleTimeout = '4';
 var tags = 'tag1=testValue1';
 var networkTestUtil = require('../../../util/networkTestUtil');
+var _ = require('underscore');
 var requiredEnvironment = [{
   name: 'AZURE_VM_TEST_LOCATION',
   defaultValue: 'westus'
@@ -71,24 +72,13 @@ describe('arm', function() {
           var cmd = util.format('network public-ip create -g %s -n %s -d %s -l %s -a %s -i %s -t %s --json', groupName, publicipName, dnsName, location, allocationMethod, idleTimeout, tags).split(' ');
           testUtils.executeCommand(suite, retry, cmd, function(result) {
             result.exitStatus.should.equal(0);
-            result.text.should.not.be.null;
-            var allResources = JSON.parse(result.text);
-            reversefqdn = allResources.dnsSettings.fqdn;
             done();
           });
         });
       });
-      it('create with new set of params should pass', function(done) {
-        var cmd = util.format('network public-ip create -g %s -n %s -l %s -d %s -f %s --json', groupName, publicipNameNew, location, dnsName1, reversefqdn).split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          var allResources = JSON.parse(result.text);
-          reversefqdn1 = allResources.dnsSettings.fqdn;
-          done();
-        });
-      });
+     
       it('set should modify publicip', function(done) {
-        var cmd = util.format('network public-ip set -g %s -n %s -d %s -a %s -i %s -f %s -t %s --json', groupName, publicipName, dnsPrefix, 'Dynamic', '5', reversefqdn1, 'tag1=testValue1;tag2=testValue2').split(' ');
+		var cmd = util.format('network public-ip set -g %s -n %s -d %s -a %s -i %s -t %s --json', groupName, publicipName, dnsPrefix, 'Dynamic', '5', 'tag1=testValue1;tag2=testValue2').split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
@@ -111,11 +101,11 @@ describe('arm', function() {
         });
       });
       it('list should display all publicips in resource group', function(done) {
-        var cmd = util.format('network public-ip list %s --json', groupName).split(' ');
+        var cmd = util.format('network public-ip list -g %s --json', groupName).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           var allResources = JSON.parse(result.text);
-          allResources.some(function(res) {
+          _.some(allResources, function(res) {
             return res.name === publicipName;
           }).should.be.true;
           done();
@@ -128,14 +118,6 @@ describe('arm', function() {
           done();
         });
       });
-      it('delete second publicIp should pass', function(done) {
-        var cmd = util.format('network public-ip delete %s %s --quiet --json', groupName, publicipNameNew).split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });
-
     });
 
   });

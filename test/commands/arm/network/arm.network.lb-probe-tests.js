@@ -20,6 +20,7 @@ var testUtils = require('../../../util/util');
 var CLITest = require('../../../framework/arm-cli-test');
 var testprefix = 'arm-network-lb-probe-tests';
 var networkTestUtil = require('../../../util/networkTestUtil');
+var _ = require('underscore');
 var groupName,
   location,
   groupPrefix = 'xplatTestGCreateLbProbe',
@@ -90,7 +91,7 @@ describe('arm', function() {
             networkUtil.createPublicIp(groupName, publicipPrefix, location, suite, function() {
               networkUtil.showPublicIp(groupName, publicipPrefix, suite, function() {
                 networkUtil.createFrontendIp(groupName, LBName, FrontendIpName, networkTestUtil.publicIpId, suite, function() {
-                  var cmd = util.format('network lb probe create %s %s %s -p %s -o %s -f %s -i %s -c %s  --json',
+                  var cmd = util.format('network lb probe create %s %s %s -p %s -o %s -f %s -i %s -c %s --json',
                     groupName, LBName, lbprobePrefix, protocol, port, path, interval, count).split(' ');
                   testUtils.executeCommand(suite, retry, cmd, function(result) {
                     result.exitStatus.should.equal(0);
@@ -107,7 +108,7 @@ describe('arm', function() {
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           var allResources = JSON.parse(result.text);
-          allResources.some(function(res) {
+          _.some(allResources, function(res) {
             return res.name === lbprobePrefix;
           }).should.be.true;
           done();

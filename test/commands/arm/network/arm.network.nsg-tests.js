@@ -21,6 +21,7 @@ var CLITest = require('../../../framework/arm-cli-test');
 var testprefix = 'arm-network-nsg-tests';
 var tags = 'tag1=testValue1';
 var networkTestUtil = require('../../../util/networkTestUtil');
+var _ = require('underscore');
 var groupName, nsgName, location,
   groupPrefix = 'xplatTestGCreateNsg',
   nsgPrefix = 'xplatTestNsg';
@@ -94,7 +95,7 @@ describe('arm', function() {
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           var allResources = JSON.parse(result.text);
-          allResources.some(function(res) {
+          _.some(allResources, function(res) {
             return res.name === nsgName;
           }).should.be.true;
           done();

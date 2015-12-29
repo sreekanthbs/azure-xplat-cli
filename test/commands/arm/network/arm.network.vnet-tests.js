@@ -21,6 +21,7 @@ var CLITest = require('../../../framework/arm-cli-test');
 var testprefix = 'arm-network-vnet-tests';
 var vnetPrefix = 'xplatTestVnet';
 var networkTestUtil = require('../../../util/networkTestUtil');
+var _ = require('underscore');
 var groupName, location,
   groupPrefix = 'xplatTestGCreatevnet',
   dnsAdd = '8.8.8.8',
@@ -46,9 +47,6 @@ describe('arm', function() {
       });
     });
     after(function(done) {
-      // deleteUsedGroup(function() {
-      // suite.teardownSuite(done);
-      // });
       networkUtil.deleteUsedGroup(groupName, suite, function(result) {
         suite.teardownSuite(done);
       });
@@ -61,9 +59,7 @@ describe('arm', function() {
     });
 
     describe('vnet', function() {
-
       it('create should pass', function(done) {
-        //createGroup(function(){
         networkUtil.createGroup(groupName, location, suite, function(result) {
           var cmd = util.format('network vnet create %s %s %s -a %s -t priority=low;size=small -d %s --json', groupName, vnetPrefix, location, AddPrefix, dnsAdd).split(' ');
           testUtils.executeCommand(suite, retry, cmd, function(result) {
@@ -73,7 +69,6 @@ describe('arm', function() {
         });
       });
       it('set should modify vnet', function(done) {
-
         var cmd = util.format('network vnet set %s %s -d %s --json', groupName, vnetPrefix, dnsAdd1).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
@@ -94,7 +89,7 @@ describe('arm', function() {
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           var allResources = JSON.parse(result.text);
-          allResources.some(function(res) {
+          _.some(allResources, function(res) {
             return res.name === vnetPrefix;
           }).should.be.true;
           done();
@@ -109,6 +104,5 @@ describe('arm', function() {
       });
 
     });
-
   });
 });

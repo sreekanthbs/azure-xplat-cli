@@ -34,7 +34,8 @@ var publicIpId;
 var protocol = 'tcp',
   frontendport = '3380',
   backendport = '3380',
-  enablefloatingip = 'true';
+  enablefloatingip = 'true',
+  idle_timeout = '4';
 var protocol2 = 'tcp',
   frontendport2 = '3383',
   backendport2 = '3383',
@@ -90,8 +91,8 @@ describe('arm', function() {
             networkUtil.createPublicIp(groupName, publicipPrefix, location, suite, function() {
               networkUtil.showPublicIp(groupName, publicipPrefix, suite, function() {
                 networkUtil.createFrontendIp(groupName, LBName, FrontendIpName, networkTestUtil.publicIpId, suite, function() {
-                  var cmd = util.format('network lb inbound-nat-rule create %s %s %s -p %s -f %s -b %s -e %s -i %s --json',
-                    groupName, LBName, lbinboundprefix, protocol, frontendport, backendport, enablefloatingip, FrontendIpName).split(' ');
+                  var cmd = util.format('network lb inbound-nat-rule create %s %s %s -p %s -f %s -b %s -e %s -t %s -i %s --json',
+                    groupName, LBName, lbinboundprefix, protocol, frontendport, backendport, enablefloatingip, FrontendIpName, idle_timeout).split(' ');
                   testUtils.executeCommand(suite, retry, cmd, function(result) {
                     result.exitStatus.should.equal(0);
                     done();
@@ -106,8 +107,8 @@ describe('arm', function() {
         networkUtil.createPublicIp(groupName, publicipPrefix2, location, suite, function() {
           networkUtil.showPublicIp(groupName, publicipPrefix2, suite, function() {
             networkUtil.createFrontendIp(groupName, LBName, FrontendIpName2, networkTestUtil.publicIpId, suite, function() {
-              var cmd = util.format('network lb inbound-nat-rule create %s %s %s -p %s -f %s -b %s -e %s -i %s --json',
-                groupName, LBName, lbinboundprefix2, protocol2, frontendport2, backendport2, enablefloatingip2, FrontendIpName2).split(' ');
+              var cmd = util.format('network lb inbound-nat-rule create %s %s %s -p %s -f %s -b %s -e %s -t %s -i %s --json',
+                groupName, LBName, lbinboundprefix2, protocol2, frontendport2, backendport2, enablefloatingip2, FrontendIpName2, idle_timeout).split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 done();
@@ -127,7 +128,7 @@ describe('arm', function() {
         });
       });
       it('set should modify inbound-nat-rule', function(done) {
-        var cmd = util.format('network lb inbound-nat-rule set %s %s %s -p udp -f 3381 -b 3381 -e false -i %s --json', groupName, LBName, lbinboundprefix, FrontendIpName).split(' ');
+        var cmd = util.format('network lb inbound-nat-rule set %s %s %s -p udp -f 3381 -b 3381 -e false -t %s --json', groupName, LBName, lbinboundprefix, FrontendIpName).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();

@@ -97,7 +97,7 @@ describe('arm', function() {
           networkUtil.createPublicIp(groupName, publicipPrefix, location, suite, function() {
             networkUtil.showPublicIp(groupName, publicipPrefix, suite, function() {
               networkUtil.createLB(groupName, LBName, location, suite, function() {
-                var cmd = util.format('network lb frontend-ip create %s %s %s -u %s  --json', groupName, LBName, FrontendIpName, networkTestUtil.publicIpId).split(' ');
+                var cmd = util.format('network lb frontend-ip create %s %s %s -u %s --json', groupName, LBName, FrontendIpName, networkTestUtil.publicIpId).split(' ');
                 testUtils.executeCommand(suite, retry, cmd, function(result) {
                   result.exitStatus.should.equal(0);
                   done();
@@ -110,7 +110,7 @@ describe('arm', function() {
       //Second frontend-ip for the same lb
       it('create should create second frontend-ip for same lb', function(done) {
         networkUtil.createPublicIp(groupName, publicipPrefix2, location, suite, function() {
-          var cmd = util.format('network lb frontend-ip create %s %s %s -i %s  --json', groupName, LBName, FrontendIpName2, publicipPrefix2).split(' ');
+          var cmd = util.format('network lb frontend-ip create %s %s %s -i %s --json', groupName, LBName, FrontendIpName2, publicipPrefix2).split(' ');
           testUtils.executeCommand(suite, retry, cmd, function(result) {
             result.exitStatus.should.equal(0);
             done();
@@ -122,7 +122,7 @@ describe('arm', function() {
         networkUtil.createVnet(groupName, vnetPrefix, location, suite, function() {
           networkUtil.createSubnet(groupName, vnetPrefix, subnetprefix, suite, function() {
             networkUtil.createLB(groupName, LBNameSV, location, suite, function() {
-              var cmd = util.format('network lb frontend-ip create %s %s %s -e %s -m %s --json', groupName, LBNameSV, FrontendIpSV, subnetprefix, vnetPrefix).split(' ');
+              var cmd = util.format('network lb frontend-ip create %s %s %s -e %s -m %s -a 10.0.0.4 --json', groupName, LBNameSV, FrontendIpSV, subnetprefix, vnetPrefix).split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 done();
