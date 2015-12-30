@@ -29,6 +29,8 @@ var expressRCPrefix = 'xplatExpressRoute',
   bandwidth2 = '70',
   skuTier = 'Standard',
   skuFamily = 'MeteredData',
+  skuTier2 = 'Premium',
+  skuFamily2 = 'UnlimitedData',
   tags1 = 'tag1=val1';
 
 var requiredEnvironment = [{
@@ -72,13 +74,13 @@ describe('arm', function() {
           });
         });
       });
-      // it('set should modify express-route', function(done) {
-        // var cmd = util.format('network express-route set %s %s -b %s --json', groupName, expressRCPrefix, bandwidth2).split(' ');
-        // testUtils.executeCommand(suite, retry, cmd, function(result) {
-          // result.exitStatus.should.equal(0);
-          // done();
-        // });
-      // });
+      it('set should modify express-route', function(done) {
+        var cmd = util.format('network express-route circuit set %s %s -e %s -f %s --json', groupName, expressRCPrefix, skuTier2, skuFamily2).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
       it('show should display details of express-route', function(done) {
         var cmd = util.format('network express-route circuit show %s %s --json', groupName, expressRCPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
